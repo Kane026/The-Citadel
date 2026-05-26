@@ -1,0 +1,87 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://xex3gm86tbek"
+path="res://.godot/imported/metallic_showroom_gallery.glb-a9d3ad3ce17a23a002e91ada815ab826.scn"
+
+[deps]
+
+source_file="res://metallic_showroom_gallery.glb"
+dest_files=["res://.godot/imported/metallic_showroom_gallery.glb-a9d3ad3ce17a23a002e91ada815ab826.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/Collada visual scene group/Material2": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/Collada visual scene group/Material210": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/Collada visual scene group/Material211": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/Collada visual scene group/Material212": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/Collada visual scene group/Material22": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/Collada visual scene group/Material23": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/Collada visual scene group/Material24": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/Collada visual scene group/Material25": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/Collada visual scene group/Material26": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/Collada visual scene group/Material27": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/Collada visual scene group/Material28": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Sketchfab_model/Collada visual scene group/Material29": {
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1
