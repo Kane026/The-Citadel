@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cwyqfvmtehalf"]
+
+[ext_resource type="PackedScene" uid="uid://dw3p20gomrcda" path="res://dukesmog.glb" id="1_hjsn5"]
+[ext_resource type="Script" uid="uid://b2ygpv8hdhpet" path="res://output.gd" id="2_moovu"]
+
+[node name="dukesmog" unique_id=2035338496 instance=ExtResource("1_hjsn5")]
+
+[node name="output" parent="." index="0" unique_id=986568265]
+script = ExtResource("2_moovu")

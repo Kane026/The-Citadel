@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://brw8b2h02y0ve"]
+
+[ext_resource type="PackedScene" uid="uid://dw3p20gomrcda" path="res://dukesmog.glb" id="1_m2m2j"]
+[ext_resource type="Script" uid="uid://b5fsdg04br1sa" path="res://collision_shape_3d.gd" id="2_6njoo"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jdqy8"]
+
+[node name="Duke_Smog" type="CharacterBody3D" unique_id=513658960]
+
+[node name="dukesmog" parent="." unique_id=2035338496 instance=ExtResource("1_m2m2j")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="dukesmog" unique_id=1395381167]
+shape = SubResource("CapsuleShape3D_jdqy8")
+script = ExtResource("2_6njoo")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="dukesmog/CollisionShape3D" unique_id=1062125999]

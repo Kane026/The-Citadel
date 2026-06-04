@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b64f4ly78crb7"]
+[gd_scene format=3 uid="uid://b64f4ly78crb7"]
 
 [ext_resource type="PackedScene" uid="uid://dy26xc485fhld" path="res://addons/srcoder_fps_controller/player.tscn" id="1_aiqsq"]
 [ext_resource type="PackedScene" uid="uid://xvirvni0l0oy" path="res://addons/srcoder_fps_controller/mouse_lock.tscn" id="2_5pheq"]
@@ -6,23 +6,40 @@
 [ext_resource type="PackedScene" uid="uid://cv5l28bkxc515" path="res://desert_eagle_gun.glb" id="3_nf3rg"]
 [ext_resource type="PackedScene" uid="uid://85bpsbphif7y" path="res://mall.glb" id="4_xdd40"]
 [ext_resource type="PackedScene" uid="uid://krh6jf7opc00" path="res://knife.glb" id="5_w6de7"]
+[ext_resource type="NavigationMesh" uid="uid://yf3fu23666k8" path="res://demo/data/nav_mesh.res" id="7_5vw27"]
+[ext_resource type="Script" uid="uid://dbm47cpjv6vv" path="res://character_body_3d.gd" id="8_kek77"]
+[ext_resource type="PackedScene" uid="uid://dw3p20gomrcda" path="res://dukesmog.glb" id="9_4c57u"]
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kek77"]
 
-[node name="Player" parent="." instance=ExtResource("1_aiqsq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51877, 0)
+[node name="Node3D" type="Node3D" unique_id=975682710]
 
-[node name="Knife" parent="Player" instance=ExtResource("5_w6de7")]
+[node name="Player" parent="." unique_id=1144588488 groups=["player"] instance=ExtResource("1_aiqsq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.331965, 1.51877, 0)
+
+[node name="Knife" parent="Player" unique_id=1355820861 instance=ExtResource("5_w6de7")]
 transform = Transform3D(-9.61651e-09, 0, -0.22, 0, 0.22, 0, 0.22, 0, -9.61651e-09, 0.436576, -0.075057, -0.872718)
 visible = false
 
-[node name="Gun" parent="Player" instance=ExtResource("3_nf3rg")]
+[node name="Gun" parent="Player" unique_id=829447218 instance=ExtResource("3_nf3rg")]
 transform = Transform3D(-0.003, 0, -2.62268e-10, 0, 0.003, 0, 2.62268e-10, 0, -0.003, 0.315431, -0.0376108, -0.872822)
 
-[node name="MouseLock" parent="." instance=ExtResource("2_5pheq")]
+[node name="MouseLock" parent="." unique_id=1056172611 instance=ExtResource("2_5pheq")]
 
-[node name="untitled" parent="." instance=ExtResource("3_djs0f")]
+[node name="untitled" parent="." unique_id=1340143743 instance=ExtResource("3_djs0f")]
 transform = Transform3D(-0.2, 0, 0.000129158, 0, 0.2, 0, -0.000129158, 0, -0.2, 288.855, -1.66443, -11.3678)
 
-[node name="mall" parent="." instance=ExtResource("4_xdd40")]
+[node name="mall" parent="." unique_id=1017405399 instance=ExtResource("4_xdd40")]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 3.04155, 3.44819, -0.595139)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=2023759310]
+navigation_mesh = ExtResource("7_5vw27")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=385281438]
+script = ExtResource("8_kek77")
+
+[node name="dukesmog" parent="CharacterBody3D" unique_id=2035338496 instance=ExtResource("9_4c57u")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1750089440]
+shape = SubResource("CapsuleShape3D_kek77")
