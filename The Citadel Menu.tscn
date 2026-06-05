@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://cxan2u7xyabri"]
+
+[ext_resource type="Script" uid="uid://dgtrmfkg06766" path="res://the_citadel_menu.gd" id="1_5pkuc"]
+[ext_resource type="Texture2D" uid="uid://bpqw3jt3f3m47" path="res://addons/maaacks_options_menus/assets/thecitadel_nobg.png" id="1_ngppb"]
+[ext_resource type="Texture2D" uid="uid://bmckvawqrhbxy" path="res://addons/maaacks_options_menus/docs/mainmenuachtergrond.png" id="1_u13xy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ngppb"]
+texture = ExtResource("1_u13xy")
+
+[sub_resource type="SystemFont" id="SystemFont_5pkuc"]
+font_names = PackedStringArray("Mistral")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dpmk"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.79983413, 0.07529863, 0.027802054, 0.627451)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 5.0
+expand_margin_top = 15.0
+expand_margin_right = 5.0
+expand_margin_bottom = 15.0
+shadow_size = 7
+shadow_offset = Vector2(5, 5)
+anti_aliasing_size = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngppb"]
+bg_color = Color(0.1842317, 0.17230108, 0.16752705, 0.38431373)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 5.0
+expand_margin_top = 15.0
+expand_margin_right = 5.0
+expand_margin_bottom = 15.0
+shadow_size = 7
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u13xy"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.89839464, 0.30667576, 0.3895522, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 5.0
+expand_margin_top = 15.0
+expand_margin_right = 5.0
+expand_margin_bottom = 15.0
+shadow_color = Color(0, 0, 0.078431375, 0.6)
+shadow_size = 7
+shadow_offset = Vector2(5, 5)
+anti_aliasing_size = 5.0
+
+[node name="Control" type="Control" unique_id=297406732]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5pkuc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=167519019]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=422635289]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 1149.0
+offset_bottom = 645.0
+
+[node name="Panel" type="Panel" parent="." unique_id=1711431642]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 1921.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ngppb")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1177199369]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 270.0
+offset_right = 1437.0
+offset_bottom = 990.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer" unique_id=1103265651]
+position = Vector2(478, 53)
+scale = Vector2(0.548, 0.42)
+texture = ExtResource("1_ngppb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=461788002]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=142766875]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_5pkuc")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_4dpmk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ngppb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_u13xy")
+text = "START"
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1819387834]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_5pkuc")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_4dpmk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ngppb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_u13xy")
+text = "OPTIONS"
+
+[node name="Button3" type="Button" parent="CenterContainer/VBoxContainer" unique_id=623343753]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_5pkuc")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_4dpmk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ngppb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_u13xy")
+text = "QUIT"
+
+[node name="Button4" type="Button" parent="CenterContainer/VBoxContainer" unique_id=100099137]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_5pkuc")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_4dpmk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ngppb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_u13xy")
+text = "CREDITS"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
