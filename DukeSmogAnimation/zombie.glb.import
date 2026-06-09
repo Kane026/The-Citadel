@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cjajg1s676ua5"
-path="res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Walking_withSkin.glb-00205f06d4fc010926b9f672d36e20e4.scn"
+uid="uid://bjdnsn8xge4v7"
+path="res://.godot/imported/zombie.glb-638e525fed7a5fdf054c2f10c3cbed60.scn"
 
 [deps]
 
-source_file="res://Meshy_AI_Voor_Mutatie_biped_Animation_Walking_withSkin.glb"
-dest_files=["res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Walking_withSkin.glb-00205f06d4fc010926b9f672d36e20e4.scn"]
+source_file="res://DukeSmogAnimation/zombie.glb"
+dest_files=["res://.godot/imported/zombie.glb-638e525fed7a5fdf054c2f10c3cbed60.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dmalwulwuk2q3"
-path="res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Lie_Back_Leg_Swing_withSkin.glb-cef2c0f25ba7d973f5c7c83ae8083b5a.scn"
+uid="uid://cjisaytrmo8ee"
+path="res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Backflip_Jump_withSkin.glb-4bd61dfb60320d8aaf2bae9930d366e1.scn"
 
 [deps]
 
-source_file="res://Meshy_AI_Voor_Mutatie_biped_Animation_Lie_Back_Leg_Swing_withSkin.glb"
-dest_files=["res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Lie_Back_Leg_Swing_withSkin.glb-cef2c0f25ba7d973f5c7c83ae8083b5a.scn"]
+source_file="res://DukeSmogAnimation/Meshy_AI_Voor_Mutatie_biped_Animation_Backflip_Jump_withSkin.glb"
+dest_files=["res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Backflip_Jump_withSkin.glb-4bd61dfb60320d8aaf2bae9930d366e1.scn"]
 
 [params]
 
@@ -37,6 +37,13 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Armature/Skeleton3D/char1": {
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

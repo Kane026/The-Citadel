@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cvikoiw4d4s4o"
-path="res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Catching_Breath_withSkin.glb-272a954a456643ef7723dbf6d5befede.scn"
+uid="uid://cfmei64o46tau"
+path="res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Lie_Back_Leg_Swing_withSkin.glb-7d6de8194c99b4bad03562d2b7d23c3d.scn"
 
 [deps]
 
-source_file="res://Meshy_AI_Voor_Mutatie_biped_Animation_Catching_Breath_withSkin.glb"
-dest_files=["res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Catching_Breath_withSkin.glb-272a954a456643ef7723dbf6d5befede.scn"]
+source_file="res://DukeSmogAnimation/Meshy_AI_Voor_Mutatie_biped_Animation_Lie_Back_Leg_Swing_withSkin.glb"
+dest_files=["res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Lie_Back_Leg_Swing_withSkin.glb-7d6de8194c99b4bad03562d2b7d23c3d.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bfxwvdbqfjpxw"
-path="res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Running_withSkin.glb-fe5364e32112f91abe5a0b2b327eb52e.scn"
+uid="uid://cfr3km3g3kyef"
+path="res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Walking_withSkin.glb-c9f55106046b8dfdd923fc14009833d2.scn"
 
 [deps]
 
-source_file="res://Meshy_AI_Voor_Mutatie_biped_Animation_Running_withSkin.glb"
-dest_files=["res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Running_withSkin.glb-fe5364e32112f91abe5a0b2b327eb52e.scn"]
+source_file="res://DukeSmogAnimation/Meshy_AI_Voor_Mutatie_biped_Animation_Walking_withSkin.glb"
+dest_files=["res://.godot/imported/Meshy_AI_Voor_Mutatie_biped_Animation_Walking_withSkin.glb-c9f55106046b8dfdd923fc14009833d2.scn"]
 
 [params]
 

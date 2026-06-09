@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://krh6jf7opc00" path="res://knife.glb" id="5_w6de7"]
 [ext_resource type="NavigationMesh" uid="uid://yf3fu23666k8" path="res://demo/data/nav_mesh.res" id="7_5vw27"]
 [ext_resource type="Script" uid="uid://dbm47cpjv6vv" path="res://character_body_3d.gd" id="8_kek77"]
-[ext_resource type="PackedScene" uid="uid://dw3p20gomrcda" path="res://dukesmog.glb" id="9_4c57u"]
+[ext_resource type="PackedScene" uid="uid://csmsyka1wfjfv" path="res://Meshy_AI_Animation_Run_02_withSkin.glb" id="9_kek77"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kek77"]
 
@@ -36,10 +36,11 @@ transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 3.04155, 3.44819, -0.59
 navigation_mesh = ExtResource("7_5vw27")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=385281438]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19401407, 0)
 script = ExtResource("8_kek77")
 
-[node name="dukesmog" parent="CharacterBody3D" unique_id=2035338496 instance=ExtResource("9_4c57u")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+[node name="Meshy_AI_Animation_Run_02_withSkin" parent="CharacterBody3D" unique_id=951922657 instance=ExtResource("9_kek77")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 0, -0.86653435, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1750089440]
 shape = SubResource("CapsuleShape3D_kek77")
