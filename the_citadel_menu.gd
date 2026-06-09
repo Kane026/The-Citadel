@@ -25,3 +25,19 @@ func _on_back_pressed() -> void:
 	$CenterContainer/VBoxContainer/Button2.visible = true
 	$CenterContainer/VBoxContainer/Button3.visible = true
 	$CenterContainer/VBoxContainer/Button4.visible = true
+
+
+func _on_back_options_pressed() -> void:
+	$OptionsMenu.visible = false
+	$CenterContainer/VBoxContainer/Button.visible = true
+	$CenterContainer/VBoxContainer/Button2.visible = true
+	$CenterContainer/VBoxContainer/Button3.visible = true
+	$CenterContainer/VBoxContainer/Button4.visible = true
+
+
+func _on_button_2_pressed() -> void:
+	$OptionsMenu.visible = true
+	$CenterContainer/VBoxContainer/Button.visible = false
+	$CenterContainer/VBoxContainer/Button2.visible = false
+	$CenterContainer/VBoxContainer/Button3.visible = false
+	$CenterContainer/VBoxContainer/Button4.visible = false
