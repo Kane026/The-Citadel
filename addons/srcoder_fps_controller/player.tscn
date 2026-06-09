@@ -1,7 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy26xc485fhld"]
+[gd_scene load_steps=9 format=3 uid="uid://dy26xc485fhld"]
 
 [ext_resource type="Script" path="res://addons/srcoder_fps_controller/assets/scripts/player.gd" id="1_f6swd"]
 [ext_resource type="Material" uid="uid://xksju4002ur7" path="res://addons/srcoder_fps_controller/assets/materials/white.material" id="2_fs15m"]
+[ext_resource type="PackedScene" uid="uid://cv5l28bkxc515" path="res://desert_eagle_gun.glb" id="3_djd0e"]
+[ext_resource type="PackedScene" uid="uid://iwlpamd20oko" path="res://addons/customizableCrosshair/crosshair/crosshair.tscn" id="4_xyajf"]
+[ext_resource type="PackedScene" uid="uid://krh6jf7opc00" path="res://knife.glb" id="5_nn1ym"]
+[ext_resource type="PackedScene" uid="uid://nls28licdhix" path="res://BinbunVFX/muzzle_flash/effects/big_flash/flashlight.glb" id="6_ap7fr"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ntw7j"]
 
@@ -25,3 +29,24 @@ shape = SubResource("CapsuleShape3D_ha1jo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49559, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+
+[node name="Gun" parent="CameraPivot/Camera3D" instance=ExtResource("3_djd0e")]
+transform = Transform3D(-0.003, 0, -2.62268e-10, 0, 0.003, 0, 2.62268e-10, 0, -0.003, 0.315431, -0.460996, -0.872822)
+visible = false
+
+[node name="barrel_position" type="Node3D" parent="CameraPivot/Camera3D/Gun"]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, 1.98862, 78.9541, 213.721)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CameraPivot/Camera3D/Gun"]
+
+[node name="Crosshair" parent="CameraPivot/Camera3D/Gun/CanvasLayer" instance=ExtResource("4_xyajf")]
+crosshairColor = Color(1, 0.992157, 1, 1)
+
+[node name="Knife" parent="CameraPivot/Camera3D" instance=ExtResource("5_nn1ym")]
+transform = Transform3D(-9.61651e-09, 0, -0.22, 0, 0.22, 0, 0.22, 0, -9.61651e-09, 0.436576, -0.598817, -0.872718)
+
+[node name="flashlight" parent="CameraPivot/Camera3D" instance=ExtResource("6_ap7fr")]
+transform = Transform3D(-1.5299e-08, 0, -0.35, 0, 0.35, 0, 0.35, 0, -1.5299e-08, -0.487431, -0.412985, -0.324911)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CameraPivot/Camera3D/flashlight"]
+transform = Transform3D(-1.2489e-07, 0, 2.85714, 0, 2.85714, 0, -2.85714, 0, -1.2489e-07, -1.04606, 0, 2.38419e-07)

@@ -21,8 +21,11 @@ var pitch = 0
 # the camera pivot for head pitch movement
 @onready var camera_pivot : Node3D = $CameraPivot
 
-@onready var knife = $Knife
-@onready var gun = $Gun
+@onready var knife = $CameraPivot/Camera3D/Knife
+@onready var gun = $CameraPivot/Camera3D/Gun
+
+var bullet=load("res://bullet.tscn")
+@onready var barrel_position = $CameraPivot/Camera3D/Gun/barrel_position
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -33,21 +36,34 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = jump_velocity
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# Shooting
+	if Input.is_action_just_pressed("shoot"):
+		if gun.visible:
+			var instance = bullet.instantiate()
+
+			get_tree().current_scene.add_child(instance)
+
+			instance.global_position = barrel_position.global_position
+			instance.global_transform.basis = barrel_position.global_transform.basis
+
+		
+
+	# Movement
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y))
+
 	var target_velocity := Vector3.ZERO
+
 	if direction:
 		target_velocity = direction
-	#now apply velocity with lerp based on whether on ground or in air
+
 	if is_on_floor():
-		velocity.x = move_toward(velocity.x , target_velocity.x * speed , speed * ground_acceleration * delta)
+		velocity.x = move_toward(velocity.x, target_velocity.x * speed, speed * ground_acceleration * delta)
 		velocity.z = move_toward(velocity.z, target_velocity.z * speed, speed * ground_acceleration * delta)
 	else:
-		velocity.x = move_toward(velocity.x , target_velocity.x * speed , speed * air_acceleration * delta)
+		velocity.x = move_toward(velocity.x, target_velocity.x * speed, speed * air_acceleration * delta)
 		velocity.z = move_toward(velocity.z, target_velocity.z * speed, speed * air_acceleration * delta)
-	#now actually move based on velocity
+
 	move_and_slide()
 	
 	#rotate the player and camera pivot based on mouse movement
@@ -71,6 +87,7 @@ func _input(event: InputEvent):
 	if event.is_action_pressed("weapon_2"):
 		knife.visible = false
 		gun.visible = true
+		
 		
 		
 

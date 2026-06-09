@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6jqq6qrbb7uj"]
+
+[ext_resource type="Script" path="res://bullet.gd" id="1_71sd4"]
+[ext_resource type="PackedScene" uid="uid://d1q4rxciftf6c" path="res://bullet_9_mm.glb" id="2_cs1rx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k4hb3"]
+
+[node name="Bullet" type="CharacterBody3D"]
+script = ExtResource("1_71sd4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_k4hb3")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_cs1rx")]
+transform = Transform3D(-1.74846e-06, 0, 40, 0, 40, 0, -40, 0, -1.74846e-06, 0, 0, 0)
