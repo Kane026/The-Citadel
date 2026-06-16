@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://tbbkiym4iylb"]
+
+[ext_resource type="PackedScene" uid="uid://cv5l28bkxc515" path="res://desert_eagle_gun.glb" id="1_tny85"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_tny85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.70076, 0, -7.34433)
