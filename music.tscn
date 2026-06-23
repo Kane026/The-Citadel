@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c20xo23phw626"]
+
+[ext_resource type="AudioStream" uid="uid://b2cwi04l2l1x2" path="res://Jammerende Man - Spookslot.mp3" id="1_3h6ak"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=900781889]
+stream = ExtResource("1_3h6ak")
+autoplay = true
