@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d1q4rxciftf6c"
-path="res://.godot/imported/bullet_9_mm.glb-3633ff9f757adcb43f43bd3af828ddb0.scn"
+uid="uid://cjvjqcp0udkk6"
+path="res://.godot/imported/dukesmog-final.glb-3a01f18a006c914866dc5914726c1a8a.scn"
 
 [deps]
 
-source_file="res://bullet_9_mm.glb"
-dest_files=["res://.godot/imported/bullet_9_mm.glb-3633ff9f757adcb43f43bd3af828ddb0.scn"]
+source_file="res://dukesmog-final.glb"
+dest_files=["res://.godot/imported/dukesmog-final.glb-3a01f18a006c914866dc5914726c1a8a.scn"]
 
 [params]
 
@@ -38,5 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=1
+gltf/naming_version=2
 gltf/embedded_image_handling=1

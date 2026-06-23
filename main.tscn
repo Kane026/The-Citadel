@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b64f4ly78crb7"]
+[gd_scene format=3 uid="uid://b64f4ly78crb7"]
 
 [ext_resource type="PackedScene" uid="uid://dy26xc485fhld" path="res://addons/srcoder_fps_controller/player.tscn" id="1_aiqsq"]
 [ext_resource type="PackedScene" uid="uid://xvirvni0l0oy" path="res://addons/srcoder_fps_controller/mouse_lock.tscn" id="2_5pheq"]
 [ext_resource type="PackedScene" uid="uid://cnjb6ugj78uoe" path="res://untitled.glb" id="3_djs0f"]
 [ext_resource type="PackedScene" uid="uid://85bpsbphif7y" path="res://mall.glb" id="4_xdd40"]
+[ext_resource type="Script" uid="uid://dbm47cpjv6vv" path="res://character_body_3d.gd" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://csmsyka1wfjfv" path="res://Meshy_AI_Animation_Run_02_withSkin.glb" id="7_272bh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sf3nl"]
 sky_top_color = Color(0.0196078, 0.0313726, 0.0627451, 1)
@@ -29,24 +31,41 @@ volumetric_fog_emission = Color(0.0392157, 0.0588235, 0.101961, 1)
 volumetric_fog_emission_energy = 0.05
 volumetric_fog_anisotropy = 0.5
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="NavigationMesh" id="NavigationMesh_lquwl"]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_272bh"]
+
+[node name="Node3D" type="Node3D" unique_id=1703018339]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=108789166]
 transform = Transform3D(0.0906326, 0.649415, -0.755014, 0, 0.758134, 0.652098, 0.995884, -0.0591013, 0.0687117, -2.17308, 3.48457, 0)
 light_color = Color(0.690196, 0.752941, 0.878431, 1)
 light_energy = 0.5
 light_volumetric_fog_energy = 15.0
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=326351263]
 environment = SubResource("Environment_05d0s")
 
-[node name="Player" parent="." instance=ExtResource("1_aiqsq")]
+[node name="Player" parent="." unique_id=1843031011 groups=["player"] instance=ExtResource("1_aiqsq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51877, 0)
 
-[node name="MouseLock" parent="." instance=ExtResource("2_5pheq")]
+[node name="MouseLock" parent="." unique_id=2125214691 instance=ExtResource("2_5pheq")]
 
-[node name="untitled" parent="." instance=ExtResource("3_djs0f")]
+[node name="untitled" parent="." unique_id=2045051846 instance=ExtResource("3_djs0f")]
 transform = Transform3D(-0.2, 0, 0.000129158, 0, 0.2, 0, -0.000129158, 0, -0.2, 288.855, -1.66443, -11.3678)
 
-[node name="mall" parent="." instance=ExtResource("4_xdd40")]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1462828573]
+navigation_mesh = SubResource("NavigationMesh_lquwl")
+
+[node name="mall" parent="NavigationRegion3D" unique_id=84938581 instance=ExtResource("4_xdd40")]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 3.04155, 3.44819, -0.595139)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1775582652 groups=["dukesmog"]]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12, 0, 0)
+script = ExtResource("5_lquwl")
+
+[node name="Meshy_AI_Animation_Run_02_withSkin" parent="CharacterBody3D" unique_id=951922657 instance=ExtResource("7_272bh")]
+transform = Transform3D(2.0519998, 0, 7.1054274e-15, 0, 2.142, 0, 7.1054274e-15, 0, 2.7, 0, -0.7, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1724797572]
+shape = SubResource("CapsuleShape3D_272bh")
